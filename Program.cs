@@ -22,7 +22,20 @@ namespace DataStructures2
             //Console.WriteLine(Node.size);
 
             //UserCase2
-            int []values = { 56, 30, 40, 22, 11, 16, 3, 70, 60, 95, 65, 63, 67 };
+            //int []values = { 56, 30, 40, 22, 11, 16, 3, 70, 60, 95, 65, 63, 67 };
+            //Node root = null;
+
+            //for (int i = 0; i < values.Length; i++)
+            //{
+            //    root = insert(root, values[i]);
+            //}
+
+            //inorder(root);
+            //Console.WriteLine();
+            //Console.WriteLine(Node.size);
+
+            //UserCase3
+            int[]values = { 56, 30, 40, 22, 11, 16, 3, 70, 60, 95, 65, 63, 67 };
             Node root = null;
 
             for (int i = 0; i < values.Length; i++)
@@ -30,9 +43,14 @@ namespace DataStructures2
                 root = insert(root, values[i]);
             }
 
-            inorder(root);
-            Console.WriteLine();
-            Console.WriteLine(Node.size);
+            if (search(root, 63))
+            {
+                Console.WriteLine("Found");
+            }
+            else
+            {
+                Console.WriteLine("Not found");
+            }
         }
     }
 }

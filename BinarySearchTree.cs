@@ -52,5 +52,29 @@ namespace DataStructures2
             Console.Write(root.data + "  ");
             inorder(root.right);
         }
+
+        public static Boolean search(Node root, int key)
+        { //O(H)
+            if (root == null)
+            {
+                return false;
+            }
+            if (root.data > key)
+            {
+                return search(root.left, key);
+            }
+            else if (root.data < key)
+            {
+                return search(root.right, key);
+            }
+            else if (root.data == key)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
